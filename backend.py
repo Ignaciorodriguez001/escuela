@@ -31,3 +31,6 @@ def queryState(id):
     return jsonify({"x": ghost.pos[0], "y": ghost.pos[1]})
 
 app.run()
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=$PORT, debug=True)

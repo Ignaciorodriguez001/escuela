@@ -9,6 +9,11 @@ games = {}
 app = flask.Flask(__name__)
 CORS(app)
 #prueba2
+
+@app.route('/')
+def home():
+   return '¡Hola Mundo!'
+
 @app.route("/games", methods=["POST"])
 def create():
     global games
@@ -32,5 +37,5 @@ def queryState(id):
 
     
 app.run()
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000, debug=True)
+#if __name__ == '__main__':
+#    app.run(host='0.0.0.0', port=3000, debug=True)
